@@ -6,7 +6,7 @@ version = '1.0'
 setup(name='bise.multilingualglossary',
       version=version,
       description="Schema Extenders to add multilingual term and definitions to PloneGlossary",
-      long_description=open("README.txt").read() + "\n" +
+      long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers
@@ -15,9 +15,9 @@ setup(name='bise.multilingualglossary',
         "Programming Language :: Python",
         ],
       keywords='',
-      author='',
-      author_email='',
-      url='http://svn.plone.org/svn/collective/',
+      author='Mikel Larreategi',
+      author_email='mlarreategi@codesyntax.com',
+      url='https://github.com/eea/bise.multilingualglossary',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['bise'],
@@ -26,6 +26,7 @@ setup(name='bise.multilingualglossary',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'Products.DataGridField'
       ],
       entry_points="""
       # -*- Entry points: -*-
@@ -33,6 +34,4 @@ setup(name='bise.multilingualglossary',
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      setup_requires=["PasteScript"],
-      paster_plugins=["ZopeSkel"],
       )
