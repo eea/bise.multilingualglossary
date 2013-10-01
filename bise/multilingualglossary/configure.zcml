@@ -4,6 +4,8 @@
     xmlns:i18n="http://namespaces.zope.org/i18n"
     i18n_domain="bise.multilingualglossary">
 
-  <!-- -*- extra stuff goes here -*- -->
+    <!-- -*- extra stuff goes here -*- -->
+    <include package="archetypes.schemaextender" />
+    <adapter factory=".extender.GlossaryDefinitionExtender" />
 
 </configure>
