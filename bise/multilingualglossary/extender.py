@@ -22,26 +22,22 @@ class GlossaryDefinitionExtender(object):
 
     fields = [
         MyDataGridField1("term_translations",
+            columns=("language", "term"),
             widget=DataGridWidget(
-                columns=("language", "term"),
-                widget=DataGridWidget(
                 columns={
-                        'language': Column("Language"),
-                        'term': Column("Glossary Term"),
-                    },
-                 ),
+                    'language': Column("Language"),
+                    'term': Column("Glossary Term"),
+                },
             ),
         ),
 
         MyDataGridField2("definition_translations",
+            columns=("language", "term"),
             widget=DataGridWidget(
-                columns=("language", "term"),
-                widget=DataGridWidget(
                 columns={
-                        'language': Column("Language"),
-                        'definition': Column("Glossary definition"),
-                    },
-                 ),
+                    'language': Column("Language"),
+                    'definition': Column("Glossary definition"),
+                },
             ),
         ),
     ]
