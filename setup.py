@@ -26,7 +26,8 @@ setup(name='bise.multilingualglossary',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
-          'Products.DataGridField'
+          'Products.DataGridField',
+          'archetypes.schemaextender',
       ],
       entry_points="""
       # -*- Entry points: -*-
