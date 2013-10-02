@@ -32,7 +32,7 @@ class GlossaryDefinitionExtender(object):
         ),
 
         MyDataGridField2("definition_translations",
-            columns=("language", "term"),
+            columns=("language", "definition"),
             widget=DataGridWidget(
                 columns={
                     'language': Column("Language"),
