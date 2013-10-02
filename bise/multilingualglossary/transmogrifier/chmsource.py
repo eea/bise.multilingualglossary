@@ -61,3 +61,30 @@ class CHMReader(object):
 
                     item['definition_translations'] = definitions
                     yield item
+
+                    for element in folder.xpath('element'):
+                        item = {}
+                        item['_type'] = 'PloneGlossaryDefinition'
+                        item['_transitions'] = 'publish'
+                        item['_path'] = '/chm_terms/' + folder.get('id') + '/' +  element.get('id')
+                        item['title'] = element.get('title')
+                        item['definition'] = ' '
+                        names = []
+                        for name in folder.xpath('name/translation'):
+                            dic = {
+                                'language': name.get('lang'),
+                                'term': name.text
+                            }
+                            names.append(dic)
+
+                        item['term_translations'] = names
+                        definitions = []
+                        for definition in folder.xpath('definition/translation'):
+                            dic = {
+                                'language': definition.get('lang'),
+                                'term': definition.text
+                            }
+                            definitions.append(dic)
+
+                        item['definition_translations'] = definitions
+                        yield item
