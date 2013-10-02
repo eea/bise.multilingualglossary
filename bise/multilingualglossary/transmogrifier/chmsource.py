@@ -55,7 +55,7 @@ class CHMReader(object):
                     for definition in folder.xpath('definition/translation'):
                         dic = {
                             'language': definition.get('lang'),
-                            'term': definition.text
+                            'translation': definition.text
                         }
                         definitions.append(dic)
 
@@ -82,7 +82,7 @@ class CHMReader(object):
                         for definition in folder.xpath('definition/translation'):
                             dic = {
                                 'language': definition.get('lang'),
-                                'term': definition.text
+                                'translation': definition.text
                             }
                             definitions.append(dic)
 
