@@ -6,7 +6,6 @@
 
     <!-- -*- extra stuff goes here -*- -->
     <include package="archetypes.schemaextender" />
-    <include package=".transmogrifier" />
     <adapter factory=".extender.GlossaryDefinitionExtender" />
 
     <genericsetup:registerProfile

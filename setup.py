@@ -28,8 +28,6 @@ setup(name='bise.multilingualglossary',
           # -*- Extra requirements: -*-
           'Products.DataGridField',
           'archetypes.schemaextender',
-          'collective.transmogrifier',
-          'plone.app.transmogrifier',
       ],
       entry_points="""
       # -*- Entry points: -*-
