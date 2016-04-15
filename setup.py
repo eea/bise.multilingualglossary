@@ -1,10 +1,13 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.1'
 
-setup(name='bise.multilingualglossary',
-      version=version,
+NAME = 'bise.multilingualglossary'
+PATH = NAME.split('.') + ['version.txt']
+VERSION = open(os.path.join(*PATH)).read().strip()
+
+setup(name=NAME,
+      version=VERSION,
       description="Schema Extenders to add multilingual term and definitions to PloneGlossary",
       long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
